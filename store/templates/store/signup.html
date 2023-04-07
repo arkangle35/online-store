@@ -1,0 +1,15 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+
+<form method="POST" action"">
+  {% csrf_token %}
+  {{form.as_p}}
+  {{form.email}}
+  {{form.errors}}
+  <p>Already have an account? <a href="{% url 'login' %}" style="color:dodgerblue">Login</a>.</p>
+
+  <input type="submit" name="Create User">
+</form>
+{% endblock content %}
